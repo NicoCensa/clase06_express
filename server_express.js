@@ -108,7 +108,6 @@ archivo.save(objeto1);
 archivo.save(objeto2);
 archivo.save(objeto3);
 
-
 app.get('/',(request, response) =>{
 
     response.send("Pagina Main");
@@ -119,12 +118,10 @@ app.get('/productos',(request, response) =>{
 })
 
 app.get('/productoRandom',(request, response) =>{
-
-    response.send(archivo.getById(getRandomInt(1,archivo.getAll().length)));
+    console.log((archivo.getById(getRandomInt(1,(archivo.getAll().listaObjetos.length + 1)))))
 })
 
 const server = app.listen(PORT, ()=>{
     console.log(`Server http on ${PORT}...`);
 })
 server.on('error', error => console.log('Error on server', error));
-
