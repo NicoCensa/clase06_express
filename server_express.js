@@ -115,14 +115,12 @@ app.get('/',(request, response) =>{
 })
 
 app.get('/productos',(request, response) =>{
-    response.send(archivo.getAll(getRandomInt(1,archivo.getAll().length)));
+    response.send(archivo.getAll());
 })
 
 app.get('/productoRandom',(request, response) =>{
 
-    response.send((archivo.getById(Math.random))=>{
-        
-    });
+    response.send(archivo.getById(getRandomInt(1,archivo.getAll().length)));
 })
 
 const server = app.listen(PORT, ()=>{
