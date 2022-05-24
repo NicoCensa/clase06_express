@@ -2,9 +2,9 @@
   "name": "ejercicio",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "server_express.js",
   "scripts": {
-    "start": "node.server.js"
+    "start": "node server_express.js"
   },
   "author": "",
   "license": "ISC",
