@@ -118,7 +118,7 @@ app.get('/productos',(request, response) =>{
 })
 
 app.get('/productoRandom',(request, response) =>{
-    console.log((archivo.getById(getRandomInt(1,(archivo.getAll().listaObjetos.length + 1)))))
+    response.send((archivo.getById(getRandomInt(1,(archivo.getAll().listaObjetos.length + 1)))))
 })
 
 const server = app.listen(PORT, ()=>{
